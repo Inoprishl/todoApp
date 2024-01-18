@@ -1,0 +1,17 @@
+{% include "base.html" %}
+{% block content %}
+    <div class="submit">
+        <div class="submit-text">Are you sure you want to delete this task(s)?</div>
+        <div class="submit-tasks">   
+            {% for task in tasks %}   
+                <div class="task">
+                    <div class="task-title">{{ task.title }}</div>
+                    <div class="task-description">{{ task.description }}</div>         
+                </div>
+                {% if is_single %}<a href="/tasks/delete/?pk={{ task.id }}" class="submit-accept">Accept</a>{% endif %}
+            {% endfor %} 
+        </div> 
+        <a href="/tasks/" class="submit-refuse">Refuse</a>
+        {% if not is_single %}<a href="/tasks/delete/?pk=done" class="submit-accept">Accept</a>{% endif %}
+    </div>
+{% endblock content %}

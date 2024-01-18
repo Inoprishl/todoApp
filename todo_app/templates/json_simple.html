@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}  
+    <form action="./create_simple" method="post">
+        {% csrf_token %}
+        <input type="text" name="title" id="">
+        <input type="text" name="description" id="">
+        <input type="checkbox" checked name="status" id="">
+        <input type="submit" value="Add">
+    </form>
+</body>
+<script>
+    let body = document.querySelector('body')
+
+    fetch('./json_simple')
+        .then(response => response.json())
+        .then(data => console.log(data))
+</script>
+{% endblock content %}

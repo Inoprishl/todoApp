@@ -1,0 +1,49 @@
+{% include "base.html" %}
+{% block content %}
+    <div class="top">
+        {% for task in p.object_list %}
+            <div class="task">
+                <div class="task-body">
+                    <div class="task-body-title">{{ task.title }}</div>
+                    <div class="task-body-desc">{{ task.description }}</div>
+                </div>
+                <div class="task-bottom">
+                    <div class="task-bottom-status">
+                        <div class="task-bottom-status-text">Status:</div>
+                            {% if task.status %}
+                                <div class="task-bottom-status-true">Done</div>
+                            {% else %}
+                                <div class="task-bottom-status-false">Not done</div>
+                            {% endif %}
+                    </div>
+                    <div class="task-bottom-statusChange">
+                        {% if task.status %}
+                            <a href="status-change/{{ task.id }}/" class="task-bottom-statusChange-notdone">Not done</a>
+                        {% else %}
+                            <a href="status-change/{{ task.id }}/" class="task-bottom-statusChange-done">Done</a>
+                        {% endif %}                   
+                    </div>
+                    <a href="task-edit/{{ task.id }}/" class="task-bottom-taskChange">Change</a>
+                    <a href="submit-delete/?pk={{ task.id }}" class="task-bottom-delete">X</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="bot">
+        <a href="/" class="bot-addTask">Add task</a>
+        {% if d %}
+            <a href="submit-delete/?pk=done" class="bot-deleteDone">Delete all done</a>
+        {% endif %}
+        <div class="bot-pagination">
+            <div class="bot-pagination-currentPage">{{ p.number }}</div>
+            {% if p.has_previous %}
+                <a href="?page=1" class="bot-pagination-link">First page</a>
+                <a href="?page={{ p.previous_page_number }}" class="bot-pagination-link">Previous page</a>
+            {% endif %}
+            {% if p.has_next %}
+                <a href="?page={{ p.next_page_number }}" class="bot-pagination-link">Next page</a>
+                <a href="?page={{ p.num_pages }}" class="bot-pagination-link">Last page</a>
+            {% endif %}
+           </div>
+    </div>
+{% endblock content %}

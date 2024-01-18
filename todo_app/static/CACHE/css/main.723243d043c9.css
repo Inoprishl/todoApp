@@ -1,0 +1,284 @@
+/* line 13, staticfiles/main.scss */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+/* line 19, staticfiles/main.scss */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 15vw; }
+  /* line 26, staticfiles/main.scss */
+  .form-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  /* line 31, staticfiles/main.scss */
+  .form-form {
+    display: flex;
+    width: 15vw;
+    justify-content: center; }
+  /* line 36, staticfiles/main.scss */
+  .form #id_title, .form #id_description {
+    padding: 5px;
+    width: 20vw;
+    font-family: sans-serif;
+    border-color: #6b6b6b;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1em;
+    color: #222222; }
+  /* line 47, staticfiles/main.scss */
+  .form #id_status {
+    cursor: pointer; }
+  /* line 50, staticfiles/main.scss */
+  .form [for=id_title], .form [for=id_description], .form [for=id_status] {
+    color: #222222;
+    font-family: sans-serif;
+    font-size: 1em; }
+  /* line 56, staticfiles/main.scss */
+  .form-submit {
+    width: 50%;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: #209720;
+    color: #fcfcfc;
+    cursor: pointer;
+    height: 25px;
+    font-size: 1em;
+    font-family: sans-serif; }
+
+/* line 68, staticfiles/main.scss */
+p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: baseline; }
+
+/* line 75, staticfiles/main.scss */
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh; }
+  /* line 81, staticfiles/main.scss */
+  .submit-text {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #222222; }
+  /* line 87, staticfiles/main.scss */
+  .submit-tasks {
+    display: flex;
+    justify-content: space-evenly; }
+  /* line 91, staticfiles/main.scss */
+  .submit .task {
+    margin: 10px;
+    min-height: 80px;
+    min-width: 100px;
+    border: #e7e7e7 1px solid;
+    border-radius: 5px; }
+    /* line 97, staticfiles/main.scss */
+    .submit .task-title, .submit .task-description {
+      text-align: center;
+      font-family: sans-serif;
+      color: #222222;
+      font-size: 1em; }
+
+/* line 105, staticfiles/main.scss */
+.top {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 75vw; }
+  /* line 110, staticfiles/main.scss */
+  .top .task {
+    width: 300px;
+    height: 150px;
+    margin: 50px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    border: #e7e7e7 solid 2.5px;
+    border-radius: 5px; }
+    /* line 118, staticfiles/main.scss */
+    .top .task-body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 66%; }
+      /* line 123, staticfiles/main.scss */
+      .top .task-body-title {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        background-color: #e7e7e7;
+        font-size: 1.25em;
+        height: 50%;
+        color: #222222; }
+      /* line 132, staticfiles/main.scss */
+      .top .task-body-desc {
+        font-family: sans-serif;
+        color: #222222;
+        padding: 5px;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        background-color: #fcfcfc; }
+    /* line 142, staticfiles/main.scss */
+    .top .task-bottom {
+      height: 34%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+      background-color: #e7e7e7; }
+      /* line 149, staticfiles/main.scss */
+      .top .task-bottom-status {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80%; }
+        /* line 154, staticfiles/main.scss */
+        .top .task-bottom-status-text {
+          font-family: sans-serif;
+          color: #222222;
+          font-size: .9em; }
+        /* line 159, staticfiles/main.scss */
+        .top .task-bottom-status-false {
+          font-family: sans-serif;
+          color: #222222;
+          font-size: .9em;
+          font-weight: bold;
+          background-color: #ecd611;
+          border-radius: 5px; }
+        /* line 167, staticfiles/main.scss */
+        .top .task-bottom-status-true {
+          font-family: sans-serif;
+          color: #fcfcfc;
+          font-size: .9em;
+          font-weight: bold;
+          background-color: #209720;
+          border-radius: 5px;
+          text-align: center; }
+      /* line 177, staticfiles/main.scss */
+      .top .task-bottom-statusChange {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        justify-content: center;
+        height: 80%; }
+        /* line 183, staticfiles/main.scss */
+        .top .task-bottom-statusChange-done {
+          width: 100%;
+          height: 100%;
+          background-color: #209720;
+          border-radius: 5px;
+          text-decoration: none;
+          color: #fcfcfc;
+          font-family: sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        /* line 195, staticfiles/main.scss */
+        .top .task-bottom-statusChange-notdone {
+          width: 100%;
+          height: 100%;
+          background-color: #d42d2d;
+          border-radius: 5px;
+          text-decoration: none;
+          color: #fcfcfc;
+          font-family: sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      /* line 208, staticfiles/main.scss */
+      .top .task-bottom-taskChange {
+        display: flex;
+        height: 80%;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+        border: #04b8ff 2px solid;
+        border-radius: 5px;
+        color: #04b8ff;
+        text-decoration: none; }
+      /* line 219, staticfiles/main.scss */
+      .top .task-bottom-delete {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border: #d42d2d 2px solid;
+        border-radius: 5px;
+        color: #d42d2d;
+        text-decoration: none; }
+
+/* line 233, staticfiles/main.scss */
+.bot {
+  display: flex;
+  height: 7.5vh;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw; }
+  /* line 241, staticfiles/main.scss */
+  .bot-addTask {
+    height: 50%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #209720;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fcfcfc;
+    font-family: sans-serif; }
+  /* line 254, staticfiles/main.scss */
+  .bot-deleteDone {
+    height: 50%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: #d42d2d 2px solid;
+    text-decoration: none;
+    color: #d42d2d;
+    font-family: sans-serif; }
+  /* line 266, staticfiles/main.scss */
+  .bot-pagination {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    justify-content: space-evenly; }
+    /* line 274, staticfiles/main.scss */
+    .bot-pagination-currentPage {
+      width: 35px;
+      height: 100%;
+      background-color: #04b8ff;
+      color: #fcfcfc;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    /* line 284, staticfiles/main.scss */
+    .bot-pagination-link {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #04b8ff;
+      margin: 0 5px 0 5px; }

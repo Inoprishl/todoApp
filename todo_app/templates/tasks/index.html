@@ -1,0 +1,12 @@
+{% include "base.html" %}
+{% block content %}
+    <div class="form">
+        <form action="form-save/" method="post" class="form-form">
+            <div class="form-body">
+                {% csrf_token %}
+                {{ form.as_p }} 
+                <input type="submit" value="Submit" class="form-submit">
+            </div>
+        </form>
+    </div>        
+{% endblock content %}

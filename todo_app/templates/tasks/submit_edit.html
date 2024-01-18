@@ -1,0 +1,12 @@
+{% include "base.html" %}
+{% block content %}
+    <div class="submit">
+        <div class="submit-text">Are you sure you want to edit this task?</div>
+        <div class="task">
+                <div class="task-title">{{ b_task.title }}</div>
+                <div class="task-description">{{ b_task.description }}</div>            
+        </div>
+        <a href="/tasks/task-edit/{{ task.id }}/?buffer={{ b_task.id }}" class="submit-refuse">Refuse</a>
+        <a href="/tasks/edit/?pk={{ task.id }}&buffer={{ b_task.id }}" class="submit-accept">Accept</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% include "base.html" %}
+{% block content %}
+<div class="form">
+    <form action="/tasks/submit-edit/{{ pk }}/" method="post">
+        <div class="form-body">
+            {% csrf_token %}
+            {{ form.as_p }} 
+            <input type="submit" value="Submit" class="submit-edit">
+        </div>
+    </form>
+</div> 
+{% endblock content %}
